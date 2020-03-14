@@ -9,8 +9,8 @@
     "cz": "git-cz",
     "lint": "eslint ./src/**/*.js"
   },
-  "main": "lib/index.js",
-  "module": "lib/index.es.js",
+  "main": "lib/movethatbus.js",
+  "module": "lib/movethatbus.es.js",
   "files": [
     "lib"
   ],

@@ -54,6 +54,6 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ### Thanks to
-- bus image source: timeless.ee
-- sound source: 
-- divine inspiration: Extreme Home Makeover
+- Bus image source: timeless.ee
+- Sound source: 
+- Divine inspiration: Extreme Home Makeover

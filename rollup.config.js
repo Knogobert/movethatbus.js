@@ -9,7 +9,7 @@ import cleanup from "rollup-plugin-cleanup";
 import del from "rollup-plugin-delete";
 
 export default {
-  input: "./src/index.js",
+  input: "./src/movethatbus.js",
   output: [{
       file: pkg.main,
       format: "cjs"
