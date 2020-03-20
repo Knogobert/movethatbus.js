@@ -7,7 +7,11 @@ const moveThatBus = {
     settings: {
         busSrc: '../src/img/bus.png' // TODO: make sure path is correct
     },
+    speed: 150,
     bus: new Image(),
+    _rando(min = 1, max = 10) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    },
     createCanvas() {
         const canvas = document.createElement('canvas');
 
@@ -30,9 +34,18 @@ const moveThatBus = {
     },
     draw(canvas) {
         const ctx = canvas.getContext('2d');
-        ctx.drawImage(this.bus, 0, 0, canvas.width, canvas.height);
+        const time = new Date();
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // window.requestAnimationFrame(this.draw(canvas));
+        ctx.save();
+        ctx.translate((canvas.width / 2), (canvas.height / 2));
+        ctx.rotate(this._rando(-2,2) * 0.0001 * time.getMilliseconds());
+        ctx.translate(-(canvas.width / 2), -(canvas.height / 2));
+        ctx.drawImage(this.bus, this._rando(0,10), this._rando(0,10), canvas.width, canvas.height);
+        ctx.restore();
+
+        // window.requestAnimationFrame(() => this.draw(canvas));
     },
     init() {
         console.info('initThatBus');
@@ -42,8 +55,8 @@ const moveThatBus = {
 
         // Draw bus
         this.bus.onload = () => {
-            this.draw(canvas);
-            // window.requestAnimationFrame(this.draw(canvas));
+            // window.requestAnimationFrame(() => this.draw(canvas));
+            setInterval(() => this.draw(canvas), this.speed);
         }
     }
 }
