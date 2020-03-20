@@ -22,6 +22,7 @@
 </p>
 
 ## Install
+
 ```
 npm install --save movethatbus.js
 ```
@@ -33,10 +34,18 @@ yarn install movethatbus.js
 ```
 
 ## Usage
+
 Coming soon
 
+## Development
+
+In repo root:
+`yarn watch` or `npm run watch`
+`npx serve`
+Browse to `localhost:5000/examples`
 
 ## License
+
 ISC License
 
 Copyright (c) 2020 Knogobert@users.noreply.github.com
@@ -54,6 +63,7 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ### Thanks to
+
 - Bus image source: timeless.ee
-- Sound source: 
+- Sound source:
 - Divine inspiration: Extreme Home Makeover
