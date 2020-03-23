@@ -6,7 +6,8 @@
 const moveThatBus = {
   settings: {
     busSrc: "../src/img/bus.png", // TODO: make sure path is correct
-    sounds: ["../src/sound/likeabus.mp3", "../src/sound/sound.mp3"]
+    sounds: ["../src/sound/likeabus.mp3", "../src/sound/sound.mp3"],
+    amountOfTimesToLetBusLoad: 1, // compares to a cookie
   },
   speed: 100,
   state: "unmoved",
@@ -60,30 +61,37 @@ const moveThatBus = {
     // window.requestAnimationFrame(() => this.draw(canvas));
   },
   init() {
-    console.info("initThatBus");
-    let clickCount = 0;
-    this.bus.src = this.settings.busSrc;
-    const canvas = this.createCanvas();
-    document.body.appendChild(canvas);
-    canvas.addEventListener(
-      "click",
-      () => {
-        if (clickCount === 0) this.settings.sounds.forEach(sound => new Audio(sound).play());
-        clickCount++;
-        this.state = "moving";
-        setTimeout(() => {
-          canvas.remove();
-          clearInterval(this.drawInterval);
-        }, 7000);
-      },
-      false
-    );
+    let alreadyMovedIt = Number(localStorage.getItem('howManyTimesDidYouMoveThatBus')) || 0;
 
-    // Draw bus
-    this.bus.onload = () => {
-      // window.requestAnimationFrame(() => this.draw(canvas));
-      this.drawInterval = setInterval(() => this.draw(canvas), this.speed);
-    };
+    if (alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
+      console.info("initThatBus");
+      let clickCount = 0;
+      this.bus.src = this.settings.busSrc;
+      const canvas = this.createCanvas();
+      document.body.appendChild(canvas);
+      canvas.addEventListener(
+        "click",
+        () => {
+          if (clickCount === 0) {
+            this.settings.sounds.forEach(sound => new Audio(sound).play());
+            clickCount++;
+            localStorage.setItem('howManyTimesDidYouMoveThatBus', `${++alreadyMovedIt || clickCount}`);
+            this.state = "moving";
+            setTimeout(() => {
+              canvas.remove();
+              clearInterval(this.drawInterval);
+            }, 7000);
+          }
+        },
+        false
+      );
+
+      // Draw bus
+      this.bus.onload = () => {
+        // window.requestAnimationFrame(() => this.draw(canvas));
+        this.drawInterval = setInterval(() => this.draw(canvas), this.speed);
+      };
+    }
   },
   destroyCanvas() {}
 };

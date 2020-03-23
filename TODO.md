@@ -4,7 +4,7 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] Add low brumming noise when not moving
+- [ ] See if a more elegant sizing for canvas can be applied
 - [ ] Make easy to init from outside
 - [ ] Update documentation
 - [ ] Create demo
@@ -13,10 +13,11 @@ Extreme Prank Makeover for your website on April Fools
 
 ### In Progress
 
-- [ ] Add cookie-handling for only triggering once
+- [ ] Add low brumming noise when not moving
 
 ### Done ✓
 
+- [x] Add cookie-handling for only triggering once
 - [x] Add sound
 - [x] Add animation
 - [x] Add bus
