@@ -65,5 +65,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ### Thanks to
 
 - Bus image source: timeless.ee
-- Sound source:
+- Like a bus credit: Like a Boss by Lonely Island
+- Move that bus sound source: Extreme Home Makeover
 - Divine inspiration: Extreme Home Makeover
