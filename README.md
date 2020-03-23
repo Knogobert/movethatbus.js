@@ -21,6 +21,11 @@
   </a>
 </p>
 
+This package is made without dependencies for you to easily include and initialize it in your project.
+It creates an overlaying canvas with a brumming bus, that triggers an animation when clicked.
+
+~~See the DEMO~~
+
 ## Install
 
 ```
