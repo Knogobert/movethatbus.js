@@ -21,6 +21,15 @@
             font-size: 2rem;
             line-height: 1.5;
         }
+        .btn-link {
+            appearance: none;
+            -webkit-appearance: none;
+            text-decoration: underline;
+            font-size: inherit;
+            color: blue;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +42,11 @@
             Canvas element with bus should be displayed in front of this on first time visit.
         </p>
         <p>
-            <small>(Clear cookies if you want to see it again.)</small>
+            <small>(<button 
+                    class="btn-link"
+                    onclick="localStorage.clear('howManyTimesDidYouMoveThatBus'); window.location.reload(false);"
+                    >Clear cookies and reload</button> if you
+                want to see it again.)</small>
         </p>
     </main>
     <!-- Include the script -->
