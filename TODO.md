@@ -4,17 +4,17 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] See if a more elegant sizing for canvas can be applied  
-- [ ] Update documentation  
 - [ ] Create npm package  
 - [ ] Launch time  
 
 ### In Progress
 
-- [ ] Make easy to init from outside  
+- [ ] See if a more elegant sizing for canvas can be applied  
 
 ### Done ✓
 
+- [x] Update documentation  
+- [x] Make easy to init from outside  
 - [x] Add cookie for checking if init should be able to be triggered  
 - [x] Add low brumming noise  
 - [x] Create demo  

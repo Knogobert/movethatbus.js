@@ -9,7 +9,7 @@ const moveThatBus = {
     soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
     clickedCookie: 'howManyTimesDidYouMoveThatBus',
-    prankableCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
+    visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
   },
   speed: 100,
   state: "unmoved",
@@ -62,8 +62,9 @@ const moveThatBus = {
 
     // window.requestAnimationFrame(() => this.draw(canvas));
   },
-  init() {
-    const visitorCanBePranked = this.settings.prankableCookie ? !!localStorage.getItem(this.settings.prankableCookie) : true;
+  init(settings) {
+    this.settings = { ...this.settings, ...settings }; // Overwrite with supplied settings
+    const visitorCanBePranked = this.settings.visitorsCookie ? !!localStorage.getItem(this.settings.visitorsCookie) : true;
     let alreadyMovedIt = Number(localStorage.getItem(this.settings.clickedCookie)) || 0;
 
     if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
@@ -96,9 +97,26 @@ const moveThatBus = {
       };
     }
   },
-  destroyCanvas() {}
 };
 
-moveThatBus.init();
+// Run init if data-movethatbus is found
+document.addEventListener('DOMContentLoaded', () => {
+  const dataAttrElem = document.querySelector('[data-movethatbus]');
+  console.log('dataAttrElem:', dataAttrElem);
+  // eslint-disable-next-line no-extra-boolean-cast
+  if (!!dataAttrElem) {
+    const attr = dataAttrElem.getAttribute('data-movethatbus').replace(/'/g, '"');
+    let settings;
+
+    try {
+      settings = attr && JSON.parse(attr);
+    } catch ( error ) {
+      console.error( 'Error parsing supplied "data-movethatbus" value, it is not valid JSON (make sure you use quoted object keys).\n', error);
+      return;
+    }
+
+    moveThatBus.init(settings);
+  }
+});
 
 // export default moveThatBus;

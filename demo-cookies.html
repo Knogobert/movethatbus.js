@@ -34,21 +34,22 @@
 </head>
 <body>
     <!-- Initialize the script -->
-    <main data-movethatbus>
+    <main data-movethatbus="{ 'visitorsCookie': 'youShouldMoveThatBus' }">
         <h1>Move That Bus demo</h1>
         <p>
             This is your content.
         </p>
         <p>
-            Canvas element with bus should be displayed in front of this on first time visit.
+            Canvas element with bus should be displayed in front of this on first time visit IF the "visitorsCookie" is set.
         </p>
         <p>
             <small>(<button class="btn-link"
                     onclick="
                         localStorage.removeItem('howManyTimesDidYouMoveThatBus');
+                        localStorage.setItem('youShouldMoveThatBus', true);
                         window.location.reload(false);
-                    ">Clear
-                    cookies and reload</button> if you want to see it again.)</small>
+                    ">Set
+                    visitorsCookie, clear clickedCookie and reload</button> if you want to see it again.)</small>
         </p>
     </main>
     <!-- Include the script -->

@@ -22,9 +22,11 @@
 </p>
 
 This package is made without dependencies for you to easily include and initialize it in your project.
-It creates an overlaying canvas with a brumming bus, that triggers an animation when clicked.
+It creates an overlaying canvas with a brumming bus, that triggers an animation with sound when clicked.
 
 [See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
+
+[See the DEMO with settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
 
 ## Install
 
@@ -40,23 +42,37 @@ yarn install movethatbus.js
 
 ## Usage
 
-### How to Init
+### How to Initialize
 
-Coming soon
+The script can be initialized by adding a simple `data-movethatbus` attribute to any HTML element.
 
-If you only want to prank certain visitors, `init()` with the setting `prankableCookie: 'youShouldMoveThatBus'` with whatever name you want for your cookie. Then make sure that the chosen visitors have that cookie set to `true`.
+*Initialization example:*
+```html
+<body data-movethatbus>
+```
+[See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
+
+If you only want to prank certain visitors, `init()` with the setting `visitorsCookie` with whatever name you want for your cookie. Then make sure that the chosen visitors have that cookie set to `true`.
 
 #### Settings
 
 ```js
-settings: {
+{
   busSrc: "src/img/bus.png",
   soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
   amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
   clickedCookie: 'howManyTimesDidYouMoveThatBus', // name of cookie
-  prankableCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
-},
+  visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
+}
 ```
+
+To be able to parse the setting keys and strings, surround them with single-quotes when using as value for data-movethatbus.
+
+*Settings example:*
+```html
+<body data-movethatbus="{ 'visitorsCookie': 'youShouldMoveThatBus' }">
+```
+[See the DEMO with settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
 
 
 ## Development
