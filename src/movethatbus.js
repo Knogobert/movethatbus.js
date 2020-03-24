@@ -9,6 +9,7 @@ const moveThatBus = {
     soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
     clickedCookie: 'howManyTimesDidYouMoveThatBus',
+    prankableCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
   },
   speed: 100,
   state: "unmoved",
@@ -62,9 +63,10 @@ const moveThatBus = {
     // window.requestAnimationFrame(() => this.draw(canvas));
   },
   init() {
+    const visitorCanBePranked = this.settings.prankableCookie ? !!localStorage.getItem(this.settings.prankableCookie) : true;
     let alreadyMovedIt = Number(localStorage.getItem(this.settings.clickedCookie)) || 0;
 
-    if (alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
+    if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
       console.info("initThatBus");
       let clickCount = 0;
       this.bus.src = this.settings.busSrc;

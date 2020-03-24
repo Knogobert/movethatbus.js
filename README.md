@@ -40,7 +40,24 @@ yarn install movethatbus.js
 
 ## Usage
 
+### How to Init
+
 Coming soon
+
+If you only want to prank certain visitors, `init()` with the setting `prankableCookie: 'youShouldMoveThatBus'` with whatever name you want for your cookie. Then make sure that the chosen visitors have that cookie set to `true`.
+
+#### Settings
+
+```js
+settings: {
+  busSrc: "src/img/bus.png",
+  soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
+  amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
+  clickedCookie: 'howManyTimesDidYouMoveThatBus', // name of cookie
+  prankableCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
+},
+```
+
 
 ## Development
 
