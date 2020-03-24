@@ -6,8 +6,9 @@
 const moveThatBus = {
   settings: {
     busSrc: "src/img/bus.png", // TODO: make sure path is correct
-    sounds: ["src/sound/likeabus.mp3", "src/sound/sound.mp3"],
-    amountOfTimesToLetBusLoad: 1, // compares to a cookie
+    soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
+    amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
+    clickedCookie: 'howManyTimesDidYouMoveThatBus',
   },
   speed: 100,
   state: "unmoved",
@@ -61,7 +62,7 @@ const moveThatBus = {
     // window.requestAnimationFrame(() => this.draw(canvas));
   },
   init() {
-    let alreadyMovedIt = Number(localStorage.getItem('howManyTimesDidYouMoveThatBus')) || 0;
+    let alreadyMovedIt = Number(localStorage.getItem(this.settings.clickedCookie)) || 0;
 
     if (alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
       console.info("initThatBus");
@@ -73,9 +74,9 @@ const moveThatBus = {
         "click",
         () => {
           if (clickCount === 0) {
-            this.settings.sounds.forEach(sound => new Audio(sound).play());
+            this.settings.soundSrcs.forEach(sound => new Audio(sound).play());
             clickCount++;
-            localStorage.setItem('howManyTimesDidYouMoveThatBus', `${++alreadyMovedIt || clickCount}`);
+            localStorage.setItem(this.settings.clickedCookie, `${++alreadyMovedIt || clickCount}`);
             this.state = "moving";
             setTimeout(() => {
               canvas.remove();
