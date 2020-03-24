@@ -5,8 +5,8 @@
  */
 const moveThatBus = {
   settings: {
-    busSrc: "../src/img/bus.png", // TODO: make sure path is correct
-    sounds: ["../src/sound/likeabus.mp3", "../src/sound/sound.mp3"],
+    busSrc: "src/img/bus.png", // TODO: make sure path is correct
+    sounds: ["src/sound/likeabus.mp3", "src/sound/sound.mp3"],
     amountOfTimesToLetBusLoad: 1, // compares to a cookie
   },
   speed: 100,

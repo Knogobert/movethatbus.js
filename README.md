@@ -24,7 +24,7 @@
 This package is made without dependencies for you to easily include and initialize it in your project.
 It creates an overlaying canvas with a brumming bus, that triggers an animation when clicked.
 
-~~See the DEMO~~
+[See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
 
 ## Install
 
@@ -47,7 +47,7 @@ Coming soon
 In repo root:
 `yarn watch` or `npm run watch`
 `npx serve`
-Browse to `localhost:5000/examples`
+Browse to `localhost:5000`
 
 ## License
 
