@@ -1,0 +1,41 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - name: Check for changes
+      run: git status
+    # - name: Commit report (error: nothing to commit, working tree clean)
+    #   run: |
+    #     git config --global user.name '${{ secrets.ci_git_user_name }}'
+    #     git config --global user.email '${{ secrets.ci_git_user_email }}'
+    #     git commit -am "ci(Build)"
+    #     git push
+      env:
+        CI: true
