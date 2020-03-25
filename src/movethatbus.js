@@ -5,8 +5,8 @@
  */
 const moveThatBus = {
   settings: {
-    busSrc: "src/img/bus.png", // TODO: make sure path is correct
-    soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
+    busSrc: "./img/bus.png",
+    soundSrcs: ["./sound/likeabus.mp3", "./sound/movethatbus.mp3", "./sound/engine.m4a"],
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
     clickedCookie: 'howManyTimesDidYouMoveThatBus',
     visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
@@ -68,7 +68,7 @@ const moveThatBus = {
     let alreadyMovedIt = Number(localStorage.getItem(this.settings.clickedCookie)) || 0;
 
     if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
-      console.info("initThatBus");
+      // console.info("initThatBus");
       let clickCount = 0;
       this.bus.src = this.settings.busSrc;
       const canvas = this.createCanvas();
@@ -103,14 +103,14 @@ const moveThatBus = {
 document.addEventListener('DOMContentLoaded', () => {
   const dataAttrElem = document.querySelector('[data-movethatbus]');
   // eslint-disable-next-line no-extra-boolean-cast
-  if (!!dataAttrElem) {
+  if (dataAttrElem) {
     const attr = dataAttrElem.getAttribute('data-movethatbus').replace(/'/g, '"');
     let settings;
 
     try {
       settings = attr && JSON.parse(attr);
     } catch ( error ) {
-      console.error( 'Error parsing supplied "data-movethatbus" value, it is not valid JSON (make sure you use quoted object keys).\n', error);
+      // console.error( 'Error parsing supplied "data-movethatbus" value, it is not valid JSON (make sure you use quoted object keys).\n', error);
       return;
     }
 
