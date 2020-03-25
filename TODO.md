@@ -4,12 +4,13 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] Create npm package  
+- [ ] See if a more elegant sizing for canvas can be applied  
 - [ ] Launch time  
+- [ ] Add support for only initializing within datetime-frame  
 
 ### In Progress
 
-- [ ] See if a more elegant sizing for canvas can be applied  
+- [ ] Create npm package  
 
 ### Done ✓
 

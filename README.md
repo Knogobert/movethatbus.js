@@ -42,8 +42,30 @@ yarn install movethatbus.js
 
 ## Usage
 
-### How to Initialize
+### How to include
 
+The script needs to be imported/included/required in your project before it can be initialized.
+
+#### If you use ES6
+```js
+import moveThatBus from 'movethatbus.js'
+```
+
+#### If you don’t use ES6/don’t know
+Append the file in a script tag just before the `</body>` tag, like:
+```js
+<script src="lib/movethatbus.js"></script>
+```
+
+### How to initialize
+
+#### If you use ES6
+Run the method init when DOM is mounted
+```js
+moveThatBus.init();
+```
+
+#### If you don’t use ES6/don’t know
 The script can be initialized by adding a simple `data-movethatbus` attribute to any HTML element.
 
 *Initialization example:*
@@ -54,7 +76,7 @@ The script can be initialized by adding a simple `data-movethatbus` attribute to
 
 If you only want to prank certain visitors, `init()` with the setting `visitorsCookie` with whatever name you want for your cookie. Then make sure that the chosen visitors have that cookie set to `true`.
 
-#### Settings
+### How to use Settings
 
 ```js
 {
@@ -66,6 +88,12 @@ If you only want to prank certain visitors, `init()` with the setting `visitorsC
 }
 ```
 
+#### If you use ES6
+```js
+moveThatBus.init({ visitorsCookie: 'youShouldMoveThatBus' });
+```
+
+#### If you don’t use ES6/don’t know
 To be able to parse the setting keys and strings, surround them with single-quotes when using as value for data-movethatbus.
 
 *Settings example:*

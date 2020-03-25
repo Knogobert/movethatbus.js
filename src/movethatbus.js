@@ -102,7 +102,6 @@ const moveThatBus = {
 // Run init if data-movethatbus is found
 document.addEventListener('DOMContentLoaded', () => {
   const dataAttrElem = document.querySelector('[data-movethatbus]');
-  console.log('dataAttrElem:', dataAttrElem);
   // eslint-disable-next-line no-extra-boolean-cast
   if (!!dataAttrElem) {
     const attr = dataAttrElem.getAttribute('data-movethatbus').replace(/'/g, '"');
@@ -119,4 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// export default moveThatBus;
+export default moveThatBus;
