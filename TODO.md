@@ -4,16 +4,16 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] See if a more elegant sizing for canvas can be applied  
 - [ ] Launch time  
 - [ ] Add support for only initializing within datetime-frame  
 
 ### In Progress
 
-- [ ] Rethink the assets sources and how to include them  
+- [ ] See if a more elegant sizing for canvas can be applied  
 
 ### Done ✓
 
+- [x] Rethink the assets sources and how to include them  
 - [x] Create npm package  
 - [x] Update documentation  
 - [x] Make easy to init from outside  

@@ -36,6 +36,7 @@ const moveThatBus = {
     canvas.style.left = "50%";
     canvas.style.transform = "translate(-50%, -50%)";
     canvas.style.overflow = "hidden";
+    canvas.style.zIndex = "9999";
 
     return canvas;
   },
