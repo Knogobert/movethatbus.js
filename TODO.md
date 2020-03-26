@@ -5,6 +5,7 @@ Extreme Prank Makeover for your website on April Fools
 ### Todo
 
 - [ ] See if a more elegant sizing for canvas can be applied  
+- [ ] Rethink the assets sources and how to include them  
 - [ ] Launch time  
 - [ ] Add support for only initializing within datetime-frame  
 

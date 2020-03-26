@@ -27,11 +27,9 @@ export default {
         "lib/*"
       ]
     }),
+    commonjs(),
     babel({
       exclude: "node_modules/**"
-    }),
-    commonjs({
-      namedExports: {}
     }),
     terser(),
     copy({
