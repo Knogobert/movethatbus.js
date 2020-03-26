@@ -5,8 +5,9 @@
  */
 const moveThatBus = {
   settings: {
-    busSrc: "./lib/img/bus.png",
-    soundSrcs: ["./lib/sound/likeabus.mp3", "./lib/sound/movethatbus.mp3", "./lib/sound/engine.m4a"],
+    cdnUrl: 'https://raw.githubusercontent.com/knogobert/movethatbus.js/master/',
+    busSrc: "lib/img/bus.png",
+    soundSrcs: ["lib/sound/likeabus.mp3", "lib/sound/movethatbus.mp3", "lib/sound/engine.m4a"],
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
     clickedCookie: 'howManyTimesDidYouMoveThatBus',
     visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
@@ -70,14 +71,14 @@ const moveThatBus = {
     if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
       console.info("initThatBus");
       let clickCount = 0;
-      this.bus.src = this.settings.busSrc;
+      this.bus.src = `${this.settings.cdnUrl}${this.settings.busSrc}`;
       const canvas = this.createCanvas();
       document.body.appendChild(canvas);
       canvas.addEventListener(
         "click",
         () => {
           if (clickCount === 0) {
-            this.settings.soundSrcs.forEach(sound => new Audio(sound).play());
+            this.settings.soundSrcs.forEach(sound => new Audio(`${this.settings.cdnUrl}${sound}`).play());
             clickCount++;
             localStorage.setItem(this.settings.clickedCookie, `${++alreadyMovedIt || clickCount}`);
             this.state = "moving";

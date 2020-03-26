@@ -1,7 +1,7 @@
 {
   "name": "movethatbus.js",
   "description": "Extreme Prank Makeover for your website on April Fools",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
