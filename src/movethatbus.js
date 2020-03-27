@@ -29,6 +29,7 @@ const moveThatBus = {
 
     // Base styling
     canvas.id = "movethatbus";
+    canvas.style.width = "100%";
     canvas.style.height = "100vh";
     canvas.style.objectFit = "cover";
     canvas.style.position = "fixed";

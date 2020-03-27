@@ -4,15 +4,17 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] Launch time  
 - [ ] Add support for only initializing within datetime-frame  
+- [ ] Add GH action for publishing npm package if version bumps  
+- [ ] Launch time 🚀  
 
 ### In Progress
 
-- [ ] See if a more elegant sizing for canvas can be applied  
+- [ ] Fix timing to wait until all sounds are loaded  
 
 ### Done ✓
 
+- [x] See if a more elegant sizing for canvas can be applied  
 - [x] Rethink the assets sources and how to include them  
 - [x] Create npm package  
 - [x] Update documentation  
