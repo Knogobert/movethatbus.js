@@ -60,7 +60,7 @@ Append the file in a script tag just before the `</body>` tag, like:
 ### How to initialize
 
 #### If you use ES6
-Run the method init when DOM is mounted
+Run the method init when/after DOM is mounted
 ```js
 moveThatBus.init();
 ```
@@ -80,8 +80,9 @@ If you only want to prank certain visitors, `init()` with the setting `visitorsC
 
 ```js
 {
-  busSrc: "src/img/bus.png",
-  soundSrcs: ["src/sound/likeabus.mp3", "src/sound/movethatbus.mp3", "src/sound/engine.m4a"],
+  cdnUrl: 'https://raw.githubusercontent.com/knogobert/movethatbus.js/master/',
+  busSrc: "lib/img/bus.png",
+  soundSrcs: ["lib/sound/likeabus.mp3", "lib/sound/movethatbus.mp3", "lib/sound/engine.m4a"],
   amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
   clickedCookie: 'howManyTimesDidYouMoveThatBus', // name of cookie
   visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
@@ -105,10 +106,7 @@ To be able to parse the setting keys and strings, surround them with single-quot
 
 ## Development
 
-In repo root:
-`yarn watch` or `npm run watch`
-`npx serve`
-Browse to `localhost:5000`
+In repo root, run either `npm run watch`, `yarn watch` or `npx serve` (and browse to `localhost:5000/demo.html`)
 
 ## License
 
