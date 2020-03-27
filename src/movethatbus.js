@@ -73,14 +73,17 @@ const moveThatBus = {
     if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
       console.info("initThatBus");
       let clickCount = 0;
+      let quickExitClicks = 0;
       this.bus.src = `${this.settings.cdnUrl}${this.settings.busSrc}`;
+      const sounds = this.settings.soundSrcs.map(sound => new Audio(`${this.settings.cdnUrl}${sound}`));
       const canvas = this.createCanvas();
       document.body.appendChild(canvas);
       canvas.addEventListener(
         "click",
         () => {
-          if (clickCount === 0) {
-            this.settings.soundSrcs.forEach(sound => new Audio(`${this.settings.cdnUrl}${sound}`).play());
+          // Respond to clicks if all sounds are somewhat loaded
+          if (sounds.every((sound) => sound.readyState >= 3) && clickCount === 0) {
+            sounds.forEach(sound => sound.play());
             clickCount++;
             localStorage.setItem(this.settings.clickedCookie, `${++alreadyMovedIt || clickCount}`);
             this.state = "moving";
@@ -88,6 +91,12 @@ const moveThatBus = {
               canvas.remove();
               clearInterval(this.drawInterval);
             }, 7000);
+          }
+          ++quickExitClicks;
+          if (quickExitClicks >= 5) {
+            sounds.forEach(sound => sound.pause());
+            canvas.remove();
+            clearInterval(this.drawInterval);
           }
         },
         false
@@ -105,7 +114,6 @@ const moveThatBus = {
 // Run init if data-movethatbus is found
 document.addEventListener('DOMContentLoaded', () => {
   const dataAttrElem = document.querySelector('[data-movethatbus]');
-  // eslint-disable-next-line no-extra-boolean-cast
   if (dataAttrElem) {
     const attr = dataAttrElem.getAttribute('data-movethatbus').replace(/'/g, '"');
     let settings;
