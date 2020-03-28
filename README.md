@@ -21,8 +21,15 @@
   </a>
 </p>
 
+---
+
+<h4>Ever wanted to reveal your website in style? Like that classy American show used to?</h4>
+
+Movethatbus.js creates an overlaying canvas with a bus, when clicked, it "moves the bus" and plays some fitting sound.<br/>
+Use for your next website reveal, as an april fools joke or just go crazy and use it on every visit!<br/>
+Have fun, but maybe not too much fun.
+
 This package is made without dependencies for you to easily include and initialize it in your project.
-It creates an overlaying canvas with a brumming bus, that triggers an animation with sound when clicked.
 
 [See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
 
