@@ -8,10 +8,10 @@ Extreme Prank Makeover for your website on April Fools
 
 ### In Progress
 
-- [ ] Launch time 🚀  
 
 ### Done ✓
 
+- [x] Launch time 🚀  
 - [x] Add support for only initializing within date-frame  
 - [x] Add GH action for publishing npm package if version bumps  
 - [x] Fix timing to wait until all sounds are loaded  
