@@ -27,13 +27,16 @@
 
 Movethatbus.js creates an overlaying canvas with a bus, when clicked, it "moves the bus" and plays some fitting sound.<br/>
 Use for your next website reveal, as an april fools joke or just go crazy and use it on every visit!<br/>
+You can restrict it to only trigger within a certain date range or for visitors that have a special cookie set.<br/>
 Have fun, but maybe not too much fun.
 
 This package is made without dependencies for you to easily include and initialize it in your project.
 
 [See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
 
-[See the DEMO with settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
+[See the DEMO with "1st April 2020 only" settings](https://knogobert.github.io/movethatbus.js/demo-dates.html)
+
+[See the DEMO with visitorsCookie settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
 
 ## Install
 
@@ -93,12 +96,16 @@ If you only want to prank certain visitors, `init()` with the setting `visitorsC
   amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
   clickedCookie: 'howManyTimesDidYouMoveThatBus', // name of cookie
   visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
+  startDate: "", // MM/DD/YYYY = 04/01/2020. Set to first day that should trigger bus
+  endDate: "", // MM/DD/YYYY = 04/02/2020. Set to *the day after* the last day that should trigger bus
 }
 ```
 
 #### If you use ES6
 ```js
 moveThatBus.init({ visitorsCookie: 'youShouldMoveThatBus' });
+// or
+moveThatBus.init({ startDate: "04/01/2020", endDate: "04/02/2020" }); // For april fools only
 ```
 
 #### If you don’t use ES6/don’t know
@@ -107,8 +114,12 @@ To be able to parse the setting keys and strings, surround them with single-quot
 *Settings example:*
 ```html
 <body data-movethatbus="{ 'visitorsCookie': 'youShouldMoveThatBus' }">
+<!-- or -->
+<main data-movethatbus="{ 'startDate': '04/01/2020', 'endDate': '04/02/2020' }"><!-- For april fools only -->
 ```
-[See the DEMO with settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
+[See the DEMO with visitorsCookie settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
+
+[See the DEMO with "1st April 2020 only" settings](https://knogobert.github.io/movethatbus.js/demo-dates.html)
 
 
 ## Development

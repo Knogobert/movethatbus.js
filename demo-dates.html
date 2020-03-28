@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Move That Bus demo-dates</title>
+    <style>
+        main {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+            'Helvetica Neue', sans-serif;
+        }
+        p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: .8rem 0;
+        }
+        .btn-link {
+            appearance: none;
+            -webkit-appearance: none;
+            text-decoration: underline;
+            font-size: inherit;
+            color: blue;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Initialize the script -->
+    <main data-movethatbus="{ 'startDate': '04/01/2020', 'endDate': '04/02/2020' }">
+        <h1>Move That Bus demo-dates</h1>
+        <p>
+            This is your content.
+        </p>
+        <p>
+            Canvas element with bus should be displayed in front of this on first time visit IF today is 1st of April 2020.
+        </p>
+        <p>
+            <small>(<button class="btn-link" onclick="
+                        localStorage.removeItem('howManyTimesDidYouMoveThatBus');
+                        window.location.reload(false);
+                    ">Clear
+                    cookies and reload</button> if you want to see it again.)</small>
+        </p>
+    </main>
+    <!-- Include the script -->
+    <script src="lib/movethatbus.js"></script>
+</body>
+</html>

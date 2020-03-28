@@ -11,6 +11,8 @@ const moveThatBus = {
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
     clickedCookie: 'howManyTimesDidYouMoveThatBus',
     visitorsCookie: false, // set to false to prank every visitor, or use string as the name for the cookie
+    startDate: "", // MM/DD/YYYY = 04/01/2020 = 1st April 2020
+    endDate: "", // MM/DD/YYYY = 04/02/2020 = 2nd April 2020
   },
   speed: 100,
   state: "unmoved",
@@ -69,8 +71,21 @@ const moveThatBus = {
     this.settings = { ...this.settings, ...settings }; // Overwrite with supplied settings
     const visitorCanBePranked = this.settings.visitorsCookie ? !!localStorage.getItem(this.settings.visitorsCookie) : true;
     let alreadyMovedIt = Number(localStorage.getItem(this.settings.clickedCookie)) || 0;
+    let prankableDate = true;
 
-    if (visitorCanBePranked && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad) {
+    // Check if today is within prank dates
+    if (this.settings.startDate && this.settings.endDate) {
+      let today = Date.now();
+      let startDate = new Date(this.settings.startDate).setHours(0, 0, 0, 0);
+      let endDate = new Date(this.settings.endDate).setHours(0, 0, 0, 0);
+      prankableDate = today <= endDate && today >= startDate;
+    }
+
+    if (
+        visitorCanBePranked
+        && prankableDate
+        && alreadyMovedIt < this.settings.amountOfTimesToLetBusLoad
+      ) {
       console.info("initThatBus");
       let clickCount = 0;
       let quickExitClicks = 0;
