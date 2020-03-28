@@ -4,7 +4,6 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Todo
 
-- [ ] Add GH action for publishing npm package if version bumps  
 - [ ] Launch time 🚀  
 
 ### In Progress
@@ -13,6 +12,7 @@ Extreme Prank Makeover for your website on April Fools
 
 ### Done ✓
 
+- [x] Add GH action for publishing npm package if version bumps  
 - [x] Fix timing to wait until all sounds are loaded  
 - [x] See if a more elegant sizing for canvas can be applied  
 - [x] Rethink the assets sources and how to include them  
