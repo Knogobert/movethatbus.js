@@ -5,7 +5,7 @@
  */
 const moveThatBus = {
   settings: {
-    cdnUrl: 'https://raw.githubusercontent.com/knogobert/movethatbus.js/master/',
+    cdnUrl: 'https://rawcdn.githubusercontent.com/knogobert/movethatbus.js/master/',
     busSrc: "lib/img/bus.png",
     soundSrcs: ["lib/sound/likeabus.mp3", "lib/sound/movethatbus.mp3", "lib/sound/engine.m4a"],
     amountOfTimesToLetBusLoad: 1, // compares to clickedCookie
