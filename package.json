@@ -16,8 +16,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": [],
-  "contributors": [],
+  "browser": true,
+  "keywords": ["prank", "april fools", "movethatbus", "extreme", "bus"],
+  "author": "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
+  "contributors": [
+    "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
+    "danba340 <danba340@users.noreply.github.com> (https://github.com/danba340)"
+  ],
   "repository": {
     "url": "https://github.com/Knogobert/movethatbus.js"
   },
