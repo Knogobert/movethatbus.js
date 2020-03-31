@@ -1,25 +1,20 @@
-<h1 align="center" style="border-bottom: none;">🚌 movethatbus.js</h1>
+<h1>🚌 movethatbus.js</h1>
 
-<h3 align="center">Extreme Prank Makeover for your website on April Fools</h3>
+<a href="https://www.npmjs.com/package/movethatbus.js">
+  <img alt="npm downloads" src="https://img.shields.io/npm/dt/movethatbus.js.svg?style=flat" />
+</a>
+<a href="https://www.npmjs.com/package/movethatbus.js">
+  <img alt="npm version" src="https://img.shields.io/npm/v/movethatbus.js.svg?style=flat" />
+</a>
+<a href="./LICENSE">
+  <img alt="license" src="https://img.shields.io/badge/license-ISC-blue.svg" />
+</a>
+<a href="https://github.com/epranka/create-package">
+  <img alt="generated with"
+    src="https://img.shields.io/badge/generated%20with-%40epranka%2Fcreate--package-blue" />
+</a>
 
-<p align="center">
-  <a href="./LICENSE">
-    <img alt="license" src="https://img.shields.io/badge/license-ISC-blue.svg" />
-  </a>
-  <a href="https://requirejs.org/docs/commonjs.html">
-    <img alt="commonjs module" src="https://img.shields.io/badge/module-CommonJS-blue" />
-  </a>
-  <a href="https://www.npmjs.com/package/movethatbus.js">
-    <img alt="npm version" src="https://img.shields.io/npm/v/movethatbus.js.svg?style=flat" />
-  </a>
-  <a href="https://www.npmjs.com/package/movethatbus.js">
-    <img alt="npm downloads" src="https://img.shields.io/npm/dt/movethatbus.js.svg?style=flat" />
-  </a>
-  <a href="https://github.com/epranka/create-package">
-    <img alt="generated with"
-      src="https://img.shields.io/badge/generated%20with-%40epranka%2Fcreate--package-blue" />
-  </a>
-</p>
+<h3>Extreme Prank Makeover for your website on April Fools</h3>
 
 ---
 
