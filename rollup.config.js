@@ -11,7 +11,8 @@ export default {
   input: "./src/movethatbus.js",
   output: [{
       file: pkg.main,
-      format: "cjs"
+      format: "cjs",
+      exports: "auto",
     },
     {
       file: pkg.module,

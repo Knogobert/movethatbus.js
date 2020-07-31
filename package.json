@@ -17,7 +17,13 @@
     "access": "public"
   },
   "browser": true,
-  "keywords": ["prank", "april fools", "movethatbus", "extreme", "bus"],
+  "keywords": [
+    "prank",
+    "april fools",
+    "movethatbus",
+    "extreme",
+    "bus"
+  ],
   "author": "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
   "contributors": [
     "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
@@ -29,25 +35,25 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@semantic-release/changelog": "^3.0.6",
-    "@semantic-release/commit-analyzer": "^7.0.0-beta.6",
-    "@semantic-release/git": "^7.1.0-beta.9",
-    "@semantic-release/npm": "^6.0.0-beta.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.5",
     "@semantic-release/release-notes-generator": "^7.3.5",
     "babel-eslint": "^10.0.3",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.1.2",
     "eslint": "^6.7.1",
-    "rollup": "^1.27.5",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^2.23.0",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-copy-assets": "^2.0.1",
     "rollup-plugin-delete": "^1.1.0",
-    "rollup-plugin-progress": "^1.1.1",
-    "rollup-plugin-terser": "^5.1.2",
-    "semantic-release": "^16.0.0-beta.38"
+    "rollup-plugin-progress": "^1.1.2",
+    "rollup-plugin-terser": "^5.3.0",
+    "semantic-release": "^17.1.1"
   },
   "peerDependencies": {}
 }
