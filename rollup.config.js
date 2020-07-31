@@ -1,7 +1,7 @@
 import pkg from "./package.json";
-import commonjs from "rollup-plugin-commonjs";
+import babel from "@rollup/plugin-babel";
+import commonjs from "@rollup/plugin-commonjs";
 import progress from "rollup-plugin-progress";
-import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import cleanup from "rollup-plugin-cleanup";
 import del from "rollup-plugin-delete";
