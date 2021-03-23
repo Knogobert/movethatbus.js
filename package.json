@@ -24,16 +24,15 @@
     "extreme",
     "bus"
   ],
-  "author": "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
+  "author": "Knogobert <Knogobert@users.noreply.github.com> (https://github.com/Knogobert)",
   "contributors": [
-    "Knogobert <Knogobert@users.noreply.github.com> (https://svenparker.com)",
+    "Knogobert <Knogobert@users.noreply.github.com> (https://github.com/Knogobert)",
     "danba340 <danba340@users.noreply.github.com> (https://github.com/danba340)"
   ],
   "repository": {
     "url": "https://github.com/Knogobert/movethatbus.js"
   },
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
