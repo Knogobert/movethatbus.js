@@ -4,6 +4,9 @@
   <img alt="npm downloads" src="https://img.shields.io/npm/dt/movethatbus.js.svg?style=flat" />
 </a>
 <a href="https://www.npmjs.com/package/movethatbus.js">
+  <img alt="npm downloads" src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat" />
+</a>
+<a href="https://www.npmjs.com/package/movethatbus.js">
   <img alt="npm version" src="https://img.shields.io/npm/v/movethatbus.js.svg?style=flat" />
 </a>
 <a href="./LICENSE">
@@ -20,12 +23,11 @@
 
 <h4>Ever wanted to reveal your website in style? Like that classy American show used to?</h4>
 
-Movethatbus.js creates an overlaying canvas with a bus, when clicked, it "moves the bus" and plays some fitting sound.<br/>
-Use for your next website reveal, as an april fools joke or just go crazy and use it on every visit!<br/>
-You can restrict it to only trigger within a certain date range or for visitors that have a special cookie set.<br/>
-Have fun, but maybe not too much fun.
+> Movethatbus.js creates an overlaying canvas with a bus, when clicked, it "moves the bus" and plays some fitting sound.<br/>
+> Use for your next website reveal, as an april fools joke or just go crazy and use it on every visit!<br/>
+> You can restrict it to only trigger within a certain date range or for visitors that have a special cookie set.<br/>
 
-This package is made without dependencies for you to easily include and initialize it in your project.
+Have fun, but maybe not too much fun.
 
 [See the DEMO](https://knogobert.github.io/movethatbus.js/demo.html)
 
@@ -33,21 +35,21 @@ This package is made without dependencies for you to easily include and initiali
 
 [See the DEMO with visitorsCookie settings](https://knogobert.github.io/movethatbus.js/demo-cookies.html)
 
-## Install
+![Imgur preview](https://i.imgur.com/vZmASRQ.gif)
+
+This package is made without dependencies for you to easily include and initialize it in your project.
+
+## Usage
+
+Get running in three easy steps.
+
+### 🔌 1. Install
 
 ```
 npm install --save movethatbus.js
 ```
 
-or
-
-```
-yarn install movethatbus.js
-```
-
-## Usage
-
-### How to include
+### 🗻 2. Include
 
 The script needs to be imported/included/required in your project before it can be initialized.
 
@@ -62,7 +64,7 @@ Append the file in a script tag just before the `</body>` tag, like:
 <script src="lib/movethatbus.js"></script>
 ```
 
-### How to initialize
+### 🌋 3. Initialize
 
 #### If you use ES6
 Run the method init when/after DOM is mounted
@@ -81,8 +83,9 @@ The script can be initialized by adding a simple `data-movethatbus` attribute to
 
 If you only want to prank certain visitors, `init()` with the setting `visitorsCookie` with whatever name you want for your cookie. Then make sure that the chosen visitors have that cookie set to `true`.
 
-### How to use Settings
+### 🎛 How to use the Settings
 
+And their default values:
 ```js
 {
   cdnUrl: 'https://raw.githubusercontent.com/knogobert/movethatbus.js/master/',
@@ -119,9 +122,11 @@ To be able to parse the setting keys and strings, surround them with single-quot
 
 ## Development
 
-In repo root, run either `npm run watch`, `yarn watch` or `npx serve` (and browse to `localhost:5000/demo.html`)
+In repo root, run either `npm run watch` and then `npx serve` (and browse to `localhost:5000/demo.html`)
 
 ## License
+
+(it is like MIT)
 
 ISC License
 
