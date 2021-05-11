@@ -6,6 +6,9 @@
 <a href="https://www.npmjs.com/package/movethatbus.js">
   <img alt="npm downloads" src="https://img.shields.io/badge/dependencies-0-brightgreen?style=flat" />
 </a>
+<a href="https://packagephobia.com/result?p=movethatbus.js">
+  <img alt="install size" src="https://packagephobia.com/badge?p=movethatbus.js" />
+</a>
 <a href="https://www.npmjs.com/package/movethatbus.js">
   <img alt="npm version" src="https://img.shields.io/npm/v/movethatbus.js.svg?style=flat" />
 </a>
